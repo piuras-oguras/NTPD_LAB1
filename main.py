@@ -43,4 +43,4 @@ print(f"Raport klasyfikacji: \n {classification_report(y_test, y_pred)}")
 print(f"Macierz pomyłek : \n {confusion_matrix(y_test, y_pred)}")
 
 # === Zadanie 3 ===
-joblib.dump(model, "model.joblib")  # zapisanie wytrenowanego modelu do pliku
+joblib.dump(model, "model_v1.joblib")  # zapisanie wytrenowanego modelu do pliku (przy kolejnych wersjach można zmieniać nazwę pliku, np. model_v2.joblib, model_v3.joblib itd.)
