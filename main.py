@@ -15,8 +15,9 @@ df = pd.DataFrame(iris.data, columns=iris.feature_names) # konwersja zbioru dany
 df["target"] = iris.target # dodanie kolumny z etykietami irisów
 
 # podstawowe statystyki danych
-print(f"Kilka pierwszych wierszy: \n {df.head()} \n")
-print(f"Informacja na temat rozmiaru danych oraz typach danych w kolumnach : \n{df.info()}  \n")
+print(f"Kilka pierwszych wierszy: \n {df.head()}")
+print("Informacja na temat rozmiaru danych oraz typach danych w kolumnach:")
+print(df.info())
 print(f"Statystyka kolumn: \n {df.describe()}  \n")
 
 # === Zadanie 2 ===
@@ -43,4 +44,4 @@ print(f"Raport klasyfikacji: \n {classification_report(y_test, y_pred)}")
 print(f"Macierz pomyłek : \n {confusion_matrix(y_test, y_pred)}")
 
 # === Zadanie 3 ===
-joblib.dump(model, "model_v1.joblib")  # zapisanie wytrenowanego modelu do pliku (przy kolejnych wersjach można zmieniać nazwę pliku, np. model_v2.joblib, model_v3.joblib itd.)
+joblib.dump(model, "model_v2.joblib")  # zapisanie wytrenowanego modelu do pliku (przy kolejnych wersjach można zmieniać nazwę pliku, np. model_v2.joblib, model_v3.joblib itd.)
